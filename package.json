@@ -1,0 +1,23 @@
+{
+  "name": "webding",
+  "version": "1.0.0",
+  "description": "Minimalist wedding invitation with RSVP and private upload zone",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "build": "echo 'Static frontend + Node backend; no build step required.'",
+    "start": "NODE_ENV=production node src/server.js"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.5",
+    "sqlite3": "^5.1.7"
+  }
+}

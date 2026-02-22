@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свадьба Анастасии и Ильи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Yeseva+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">◐</button>
+    <main>
+      <section class="hero ornate" id="hero">
+        <p class="kicker" id="welcomeText">С любовью приглашаем</p>
+        <h1>Анастасия <span>&</span> Илья</h1>
+        <p class="hero-meta"><button class="date-trigger" id="dateLegend" type="button">17 августа 2026</button> · Санкт-Петербург</p>
+        <p class="hero-description">Тёплый вечер, близкие люди, музыка и большой праздник любви. Будем счастливы разделить этот день с вами.</p>
+      </section>
+
+      <section class="details" id="details">
+        <h2>Детали</h2>
+        <div class="details-grid">
+          <article><h3>Время</h3><p>Сбор гостей — 15:30<br />Церемония — 16:00</p></article>
+          <article><h3>Адрес</h3><p>Особняк «Северный сад», набережная реки Мойки, 18</p></article>
+          <article><h3>Дресс-код</h3><p>Milk & Graphite с акцентом в бордо. Просим избегать чисто белого.</p></article>
+          <article><h3>Программа</h3><p>Церемония, ужин, танцы и ночной коктейль-бар.</p></article>
+          <article><h3>Контакты</h3><p>Координатор: Мария<br /><a href="tel:+79998887766">+7 (999) 888-77-66</a></p></article>
+        </div>
+      </section>
+
+      <section class="rsvp" id="rsvp">
+        <h2>RSVP</h2>
+        <form id="rsvpForm">
+          <label>Ваше имя <input name="name" required maxlength="80" /></label>
+          <label>Планируете быть?
+            <select name="attendance" required>
+              <option value="yes">Да, с радостью</option>
+              <option value="no">К сожалению, не смогу</option>
+            </select>
+          </label>
+          <label>Количество гостей (с вами) <input type="number" name="guestCount" min="1" max="4" value="1" /></label>
+          <label>Пожелания по еде <input name="foodPreference" maxlength="100" placeholder="вегетарианское / без лактозы" /></label>
+          <label>Пожелания по алкоголю <input name="alcoholPreference" maxlength="100" placeholder="игристое / безалкогольный коктейль" /></label>
+          <label>Комментарий <textarea name="comment" maxlength="500"></textarea></label>
+          <button type="submit">Подтвердить</button>
+          <p id="rsvpStatus"></p>
+        </form>
+      </section>
+
+      <section class="route" id="route">
+        <h2>Как добраться</h2>
+        <p>Мы выбрали площадку в историческом центре. Откройте маршрут в один клик:</p>
+        <a class="link-button" href="https://yandex.ru/maps/?text=%D0%BD%D0%B0%D0%B1.%20%D1%80%D0%B5%D0%BA%D0%B8%20%D0%9C%D0%BE%D0%B9%D0%BA%D0%B8%2018" target="_blank" rel="noopener noreferrer">Открыть маршрут</a>
+        <iframe title="Карта" src="https://www.openstreetmap.org/export/embed.html?bbox=30.3055%2C59.9366%2C30.3178%2C59.9427&amp;layer=mapnik" loading="lazy"></iframe>
+      </section>
+
+      <section class="faq" id="faq">
+        <h2>FAQ</h2>
+        <div class="accordion">
+          <button class="acc-btn">Можно ли с детьми?</button>
+          <div class="acc-panel"><p>Да, будем рады маленьким гостям. Для них будет отдельная зона.</p></div>
+          <button class="acc-btn">Будет ли трансфер?</button>
+          <div class="acc-panel"><p>После вечера организуем трансфер до метро «Адмиралтейская».</p></div>
+          <button class="acc-btn">Можно ли дарить цветы?</button>
+          <div class="acc-panel"><p>Лучше без цветов — замените их письмом с пожеланием.</p></div>
+        </div>
+      </section>
+
+      <section class="mini-game" id="miniGame">
+        <h2>Соберите 3 символа на удачу</h2>
+        <div class="symbols">
+          <button class="symbol" data-symbol="beresta">🪵</button>
+          <button class="symbol" data-symbol="ornament">✶</button>
+          <button class="symbol" data-symbol="wheat">🌾</button>
+        </div>
+        <p id="gameStatus">Найдите все символы — откроем тост.</p>
+      </section>
+
+      <section class="secret" id="secretSection" hidden>
+        <h2>Секретное послание</h2>
+        <p>«Пусть дом будет тёплым, а любовь — как северное сияние: тихая, но бесконечно яркая.»</p>
+      </section>
+
+      <section class="after" id="afterWedding">
+        <h2>После свадьбы</h2>
+        <form id="accessForm" class="access-form">
+          <label>Секретный код <input name="code" required maxlength="40" /></label>
+          <button type="submit">Открыть галерею</button>
+          <p id="accessStatus"></p>
+        </form>
+
+        <div id="uploadZone" hidden>
+          <form id="uploadForm" class="upload-form">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" />
+            <label>Ваше имя (опционально) <input name="guestName" maxlength="80" /></label>
+            <label class="drop" id="dropArea">
+              Перетащите фото/видео сюда или нажмите для выбора
+              <input type="file" name="media" id="mediaInput" multiple accept="image/jpeg,image/png,image/webp,image/heic,video/mp4,video/quicktime" />
+            </label>
+            <progress id="uploadProgress" value="0" max="100"></progress>
+            <button type="submit">Загрузить</button>
+            <p id="uploadStatus"></p>
+          </form>
+
+          <div class="filters">
+            <input id="filterMonth" placeholder="Фильтр месяц YYYY-MM" />
+            <input id="filterDay" placeholder="Фильтр день YYYY-MM-DD" />
+            <button id="applyFilter">Применить</button>
+            <a class="link-button" href="/api/upload/download.zip">Скачать все</a>
+          </div>
+
+          <div id="gallery" class="gallery"></div>
+        </div>
+      </section>
+    </main>
+
+    <button id="soundToggle" class="sound-toggle" type="button">🔔 звук вкл</button>
+    <script src="app.js" defer></script>
+  </body>
+</html>
