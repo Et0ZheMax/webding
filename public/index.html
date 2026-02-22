@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Свадьба Анастасии и Ильи</title>
+    <title>Свадьба Екатерины и Максима</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet" />
@@ -13,26 +13,27 @@
     <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">◐</button>
 
     <section class="hero" id="hero">
-      <p class="kicker" id="welcomeText">Love keeps us kind</p>
-      <h1>Анастасия <span>&</span> Илья</h1>
-      <p class="hero-meta"><button class="date-trigger" id="dateLegend" type="button">17 июля 2026</button> · Санкт-Петербург</p>
-      <p class="hero-description">С большой радостью приглашаем вас разделить с нами этот день любви и семейного тепла.</p>
+      <p class="kicker" id="welcomeText">LOVE KEEPS US KIND</p>
+      <h1>Екатерина <span>&</span> Максим</h1>
+      <p class="hero-meta"><button class="date-trigger" id="dateLegend" type="button">07 июля 2026</button> · вторник, 10:00</p>
+      <p class="hero-description">Будем рады разделить этот день с вами! 07.07.2026 состоится одно из главных событий нашей жизни — день нашей свадьбы.</p>
     </section>
 
     <main>
       <section class="details ornate" id="details">
         <h2>Детали</h2>
         <div class="details-grid">
-          <article><h3>Время</h3><p>Сбор гостей — 15:30<br />Церемония — 16:00</p></article>
-          <article><h3>Адрес</h3><p>Особняк «Северный сад», набережная реки Мойки, 18</p></article>
-          <article><h3>Дресс-код</h3><p>Тёплые природные оттенки: молочный, зелёный, бежевый, терракота, графит.</p></article>
-          <article><h3>Программа</h3><p>Церемония, ужин, танцы и ночной коктейль-бар.</p></article>
-          <article><h3>Контакты</h3><p>Координатор: Мария<br /><a href="tel:+79998887766">+7 (999) 888-77-66</a></p></article>
+          <article><h3>Церемония</h3><p>10:15 — роспись в особняке<br />ул. Малая Ордынка, дом 14, стр.1</p></article>
+          <article><h3>Фотопрогулка</h3><p>10:45–11:00 — фото<br />11:00–13:00 — прогулка</p></article>
+          <article><h3>Ресторан</h3><p>С 13:00 — ресторан «Зойка»<br />Большой Патриарший пер., 8с1</p></article>
+          <article><h3>Дресс-код</h3><p>Однотонные рубашки и платья спокойных оттенков, чтобы фото получились красивыми.</p></article>
+          <article><h3>Про цветы</h3><p>Из-за котов просим без живых букетов. Будет здорово подарить подписку на FLOWWOW или сертификат на OZON.</p></article>
         </div>
       </section>
 
       <section class="rsvp ornate" id="rsvp">
-        <h2>Анкета гостя</h2>
+        <h2>Подтверждение присутствия</h2>
+        <p>Пожалуйста, подтвердите свое присутствие до 31.03.2026. После подтверждения можно пройти опрос о вкусах и напитках.</p>
         <form id="rsvpForm">
           <label>Ваше имя <input name="name" required maxlength="80" /></label>
           <label>Планируете быть?
@@ -42,8 +43,12 @@
             </select>
           </label>
           <label>Количество гостей (с вами) <input type="number" name="guestCount" min="1" max="4" value="1" /></label>
-          <label>Пожелания по еде <input name="foodPreference" maxlength="100" placeholder="вегетарианское / без лактозы" /></label>
-          <label>Пожелания по алкоголю <input name="alcoholPreference" maxlength="100" placeholder="игристое / безалкогольный коктейль" /></label>
+          <label>Что вы предпочитаете из еды?
+            <input name="foodPreference" maxlength="100" placeholder="мясо / птица / морепродукты" />
+          </label>
+          <label>Какой алкоголь вы предпочитаете?
+            <input name="alcoholPreference" maxlength="100" placeholder="красное, розовое, шампанское, виски, водка или без алкоголя" />
+          </label>
           <label>Комментарий <textarea name="comment" maxlength="500"></textarea></label>
           <button type="submit">Подтвердить</button>
           <p id="rsvpStatus"></p>
@@ -52,20 +57,20 @@
 
       <section class="route ornate" id="route">
         <h2>Как добраться</h2>
-        <p>Мы выбрали площадку в историческом центре. Откройте маршрут в один клик:</p>
-        <a class="link-button" href="https://yandex.ru/maps/?text=%D0%BD%D0%B0%D0%B1.%20%D1%80%D0%B5%D0%BA%D0%B8%20%D0%9C%D0%BE%D0%B9%D0%BA%D0%B8%2018" target="_blank" rel="noopener noreferrer">Открыть маршрут</a>
-        <iframe title="Карта" src="https://www.openstreetmap.org/export/embed.html?bbox=30.3055%2C59.9366%2C30.3178%2C59.9427&amp;layer=mapnik" loading="lazy"></iframe>
+        <p>Основная точка сбора: ул. Малая Ордынка, 14с1. Затем перемещаемся в ресторан «Зойка».</p>
+        <a class="link-button" href="https://yandex.ru/maps/?text=%D1%83%D0%BB.%20%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F%20%D0%9E%D1%80%D0%B4%D1%8B%D0%BD%D0%BA%D0%B0%2014%D1%811" target="_blank" rel="noopener noreferrer">Открыть маршрут</a>
+        <iframe title="Карта" src="https://www.openstreetmap.org/export/embed.html?bbox=37.6193%2C55.7378%2C37.6333%2C55.7448&amp;layer=mapnik" loading="lazy"></iframe>
       </section>
 
       <section class="faq ornate" id="faq">
-        <h2>FAQ</h2>
+        <h2>ЭТОТ ДЕНЬ</h2>
         <div class="accordion">
-          <button class="acc-btn">Можно ли с детьми?</button>
-          <div class="acc-panel"><p>Да, будем рады маленьким гостям. Для них будет отдельная зона.</p></div>
-          <button class="acc-btn">Будет ли трансфер?</button>
-          <div class="acc-panel"><p>После вечера организуем трансфер до метро «Адмиралтейская».</p></div>
-          <button class="acc-btn">Можно ли дарить цветы?</button>
-          <div class="acc-panel"><p>Лучше без цветов — замените их письмом с пожеланием.</p></div>
+          <button class="acc-btn">10:00 — сбор гостей</button>
+          <div class="acc-panel"><p>Встречаемся по адресу ул. Малая Ордынка, 14с1.</p></div>
+          <button class="acc-btn">10:15 — роспись в особняке</button>
+          <div class="acc-panel"><p>Короткая церемония и теплые объятия.</p></div>
+          <button class="acc-btn">13:00 — ресторан «Зойка»</button>
+          <div class="acc-panel"><p>Большой Патриарший пер., 8с1.</p></div>
         </div>
       </section>
 
@@ -81,7 +86,7 @@
 
       <section class="secret ornate" id="secretSection" hidden>
         <h2>Секретное послание</h2>
-        <p>«Пусть дом будет тёплым, а любовь — как северное сияние: тихая, но бесконечно яркая.»</p>
+        <p>Спасибо, что вы с нами в этот день. Любовь делает всё добрее.</p>
       </section>
 
       <section class="after ornate" id="afterWedding">

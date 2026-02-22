@@ -76,10 +76,10 @@ rsvpForm.addEventListener('submit', async (event) => {
 });
 
 dateLegend.addEventListener('mouseenter', () => {
-  dateLegend.title = 'Говорят, августовская свадьба приносит в дом достаток и спокойствие.';
+  dateLegend.title = 'Говорят, июльская свадьба приносит в дом гармонию и тепло.';
 });
 dateLegend.addEventListener('click', () => {
-  alert('Мини-легенда: Август — месяц зрелости. Пусть любовь будет такой же ясной и тёплой.');
+  alert('Мини-легенда: Июль — месяц солнца. Пусть любовь будет такой же ясной и тёплой.');
 });
 
 const openedFaq = JSON.parse(localStorage.getItem('openedFaq') || '[]');
